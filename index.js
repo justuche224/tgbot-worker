@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { Telegraf, Markup } from "telegraf";
 import cron from 'node-cron';
 import { message } from "telegraf/filters";
@@ -338,8 +339,8 @@ bot.action('kyc_help', (ctx) => {
 // Bot Launch & Error Handling
 // ============================================================================
 bot.launch({ polling: true, dropPendingUpdates: true })
-    .then(() => console.log('Bot started in polling mode!'))
-    .catch(console.error);
+console.log('Bot started in polling mode!')
+
 cron.schedule('0 */3 * * *', sendCryptoUpdates, {
     timezone: 'Africa/Lagos'
 });
