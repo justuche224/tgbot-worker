@@ -99,7 +99,7 @@ export function formatCryptoMessage(data) {
     return message;
 }
 const NEWS_API_KEY = process.env.NEWS_API_ORG_KEY;
-const NEWS_API_URL = `https://newsapi.org/v2/everything?q=crypto&pageSize=5&apiKey=${NEWS_API_KEY}`;
+const NEWS_API_URL = `https://newsapi.org/v2/everything?q=crypto&pageSize=10&apiKey=${NEWS_API_KEY}`;
 /**
  * Fetches recent cryptocurrency news from the NewsAPI.
  * @returns {Promise<NewsApiResponse | null>} The API response data or null if an error occurs.
