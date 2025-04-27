@@ -381,7 +381,7 @@ console.log("Bot started in polling mode!");
 cron.schedule("0 */3 * * *", sendCryptoUpdates, {
   timezone: "Africa/Lagos",
 });
-// sendCryptoUpdates();
+sendCryptoUpdates();
 // Enable graceful stop
 process.once("SIGINT", () => {
   console.log("SIGINT received, stopping bot...");
